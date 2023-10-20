@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Aplikasi Pemesanan Tiket Travel</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>TIKET.COM</h2>
+        <form id="travelForm">
+            <label for="nama">Nama:</label>
+            <input type="text" id="nama" name="nama" required><br>
+
+            <label for="tujuan">Tujuan:</label>
+            <select id="tujuan" name="tujuan">
+                <option value="Jakarta">Jakarta</option>
+                <option value="Surabaya">Surabaya</option>
+                <option value="Yogyakarta">Yogyakarta</option>
+                <option value="Bandung">Bandung</option>
+            </select><br>
+
+            <label for="hargaTiket">Harga Tiket:</label>
+            <select id="hargaTiket" name="hargaTiket">
+                <option value="100">Rp 100,000</option>
+                <option value="150">Rp 150,000</option>
+                <option value="200">Rp 200,000</option>
+                <!-- Tambahkan pilihan harga lainnya -->
+            </select><br>
+
+            <label for="jumlahTiket">Jumlah Tiket:</label>
+            <select id="jumlahTiket" name="jumlahTiket">
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><br>
+
+            <label for="member">Member:</label>
+            <input type="checkbox" id="member" name="member"><br>
+
+            <label for="diskon">Diskon:</label>
+            <select id="diskon" name="diskon">
+                <option value="0">Tidak ada diskon</option>
+                <option value="10">Diskon 10%</option>
+                <option value="20">Diskon 20%</option>
+                <!-- Tambahkan pilihan diskon lainnya -->
+            </select><br>
+
+            <label for="totalBayar">Total Bayar:</label>
+            <input type="text" id="totalBayar" name="totalBayar" readonly><br>
+
+            <div id="rincianTiket" style="display: none;">
+                <h3>Rincian Tiket:</h3>
+                <p>Nama: <span id="namaTiket"></span></p>
+                <p>Tujuan: <span id="tujuanTiket"></span></p>
+                <p>Harga Tiket: <span id="hargaTiketTiket"></span></p>
+                <p>Jumlah Tiket: <span id="jumlahTiketTiket"></span></p>
+                <p>Diskon: <span id="diskonTiket"></span></p>
+            </div>
+
+            <button type="button" onclick="hitungTotal()">Hitung Total</button>
+
+            <!-- Tombol reset -->
+            <button type="reset">Beli Lagi</button>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
